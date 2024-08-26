@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeChanger } from "@/components/theme-changer";
 import Container from "@/components/container";
+import AppBar from "@/components/app-bar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +27,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Container>
-            <ThemeChanger />
+            <AppBar />
             {children}
           </Container>
         </ThemeProvider>
