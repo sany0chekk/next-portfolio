@@ -26,7 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Container>
+          <Container className="flex flex-col gap-14 md:gap-20">
             <AppBar />
             {children}
           </Container>
