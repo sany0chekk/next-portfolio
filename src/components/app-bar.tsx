@@ -12,9 +12,7 @@ const AppBar = ({}) => {
     <header>
       <nav className="flex justify-between items-center gap-4">
         <p className="flex items-center gap-2 font-medium text-neutral-600">
-          {`<`}
-          <span className="text-neutral-950 dark:text-white">O. Veselyi</span>
-          {`/>`}
+          Logo
         </p>
         <ul className="flex items-center gap-6">
           {links.map(({ href, text }) => {
@@ -22,7 +20,7 @@ const AppBar = ({}) => {
               <li key={text}>
                 <Link
                   href={href}
-                  className="transition-opacity font-light text-sm opacity-50 hover:opacity-95"
+                  className="transition-opacity text-sm opacity-50 hover:opacity-95"
                 >
                   {text}
                 </Link>
