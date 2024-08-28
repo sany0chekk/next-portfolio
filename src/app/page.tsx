@@ -1,25 +1,29 @@
 import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { SquareArrowOutUpRight } from "lucide-react";
+import {
+  Download,
+  Github,
+  Linkedin,
+  SquareArrowOutUpRight,
+} from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <div className="">
-      <div>
+      <div className="">
         <div className="flex justify-center mb-5">
           <span className="p-1.5 border-2 rounded-full">
-            <Image
-              src="/images/photo.jpg"
-              width={200}
-              height={200}
-              alt="Oleksandr Veselyi photo"
-              className="w-18 md:w-40 h-18 md:h-40 bg-neutral-500 rounded-full"
-            />
+            <Avatar className="w-36 h-36">
+              <AvatarImage src="/images/photo.jpg" />
+              <AvatarFallback>Oleksandr Veselyi</AvatarFallback>
+            </Avatar>
           </span>
         </div>
         <h1 className="opacity-60 font-bold text-xl text-center mb-4">
@@ -32,15 +36,25 @@ export default function Home() {
             skills and always open to new challenges to grow and deliver
             high-quality products.
           </p>
-          <p className="opacity-30 text-sm">
+          <p className="opacity-30 text-sm mb-6">
             Feel free to check out my projects and get in touch for
             collaboration!
           </p>
+
+          <Button className="inline mx-auto mb-4">
+            <a
+              href="/Oleksandr_Veselyi_Frontend-Dev.pdf"
+              className="flex items-center justify-center gap-2"
+            >
+              <Download size={20} />
+              <span className="text-sm">Download CV</span>
+            </a>
+          </Button>
         </div>
       </div>
       <div className="pt-32">
         <h2 className="opacity-50 mb-4">Completed Projects</h2>
-        <ul className="grid grid-cols-2 gap-4">
+        <ul className="grid md:grid-cols-2 gap-6">
           <li>
             <HoverCard>
               <HoverCardTrigger asChild>
