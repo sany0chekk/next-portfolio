@@ -20,7 +20,7 @@ export default function Home() {
       <div className="">
         <div className="flex justify-center mb-5">
           <span className="p-1.5 border-2 rounded-full">
-            <Avatar className="w-36 h-36">
+            <Avatar className="w-32 md:w-36 h-32 md:h-36">
               <AvatarImage src="/images/photo.jpg" />
               <AvatarFallback>Oleksandr Veselyi</AvatarFallback>
             </Avatar>
