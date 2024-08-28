@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ThemeChanger } from "./theme-changer";
+import MobileMenu from "./mobile-menu";
 
 const links = [
   { href: "/", text: "Home" },
@@ -14,7 +15,7 @@ const AppBar = ({}) => {
         <p className="flex items-center gap-2 font-medium text-neutral-600">
           Logo
         </p>
-        <ul className="flex items-center gap-6">
+        <ul className="hidden md:flex items-center gap-6">
           {links.map(({ href, text }) => {
             return (
               <li key={text}>
@@ -28,7 +29,10 @@ const AppBar = ({}) => {
             );
           })}
         </ul>
-        <ThemeChanger />
+        <div className="flex items-center gap-3">
+          <ThemeChanger />
+          <MobileMenu />
+        </div>
       </nav>
     </header>
   );
