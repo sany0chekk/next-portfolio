@@ -26,9 +26,9 @@ const skills = [
 const AboutPage = () => {
   return (
     <div>
-      <div className="flex items-start gap-10 mb-20">
+      <div className="flex flex-col md:flex-row md:items-start md:gap-10 mb-20">
         <Title>About me</Title>
-        <div className="grid gap-4">
+        <div className="grid gap-4 max-md:text-sm">
           <p>
             I’m Oleksandr, a 23-year-old Front-end Developer from Ukraine. I’m
             passionate about creating dynamic and user-friendly web
@@ -81,9 +81,15 @@ const AboutPage = () => {
         <Table>
           <TableBody>
             <TableRow className="bg-muted/50">
-              <TableCell className="font-bold">Front-end Developer</TableCell>
-              <TableCell className="opacity-70">Freelance</TableCell>
-              <TableCell className="text-right opacity-50">2024-</TableCell>
+              <TableCell className="font-bold max-md:text-xs">
+                Front-end Developer
+              </TableCell>
+              <TableCell className="opacity-70 max-md:text-xs">
+                Freelance
+              </TableCell>
+              <TableCell className="text-right opacity-50 max-md:text-xs">
+                2024-
+              </TableCell>
             </TableRow>
           </TableBody>
         </Table>
@@ -93,28 +99,38 @@ const AboutPage = () => {
         <Table>
           <TableBody>
             <TableRow>
-              <TableCell className="font-bold">
+              <TableCell className="font-bold max-md:text-xs">
                 Yuriy Fedkovych Chernivtsi National University
               </TableCell>
-              <TableCell className="opacity-70">
+              <TableCell className="opacity-70 max-md:text-xs">
                 {`Master's in Human Resource Management`} <br /> and Labor
                 Economics
               </TableCell>
-              <TableCell className="text-right opacity-50">2024-2026</TableCell>
+              <TableCell className="text-right opacity-50 max-md:text-xs">
+                2024-2026
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-bold">GoIt Academy</TableCell>
-              <TableCell className="opacity-70">Fullstack Developer</TableCell>
-              <TableCell className="text-right opacity-50">2023-2024</TableCell>
+              <TableCell className="font-bold max-md:text-xs">
+                GoIt Academy
+              </TableCell>
+              <TableCell className="opacity-70 max-md:text-xs">
+                Fullstack Developer
+              </TableCell>
+              <TableCell className="text-right opacity-50 max-md:text-xs">
+                2023-2024
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-bold">
+              <TableCell className="font-bold max-md:text-xs">
                 Yuriy Fedkovych Chernivtsi National University
               </TableCell>
-              <TableCell className="opacity-70">
+              <TableCell className="opacity-70 max-md:text-xs">
                 Bachelor of Marketing
               </TableCell>
-              <TableCell className="text-right opacity-50">2019-2021</TableCell>
+              <TableCell className="text-right opacity-50 max-md:text-xs">
+                2019-2021
+              </TableCell>
             </TableRow>
           </TableBody>
         </Table>

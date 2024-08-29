@@ -1,19 +1,8 @@
-import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
-import {
-  Download,
-  Github,
-  Linkedin,
-  SquareArrowOutUpRight,
-} from "lucide-react";
-import Link from "next/link";
+import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Title from "@/components/ui/title";
+import ProjectList from "@/components/ProjectList";
 
 export default function Home() {
   return (
@@ -55,129 +44,8 @@ export default function Home() {
         </div>
       </div>
       <div className="pt-32">
-        <Title>Completed Projects</Title>
-        <ul className="grid md:grid-cols-2 gap-6">
-          <li>
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <Link
-                  href="https://sany0chekk.github.io/smartnotes/"
-                  target="_blank"
-                >
-                  <div className="rounded-md overflow-hidden border-2 relative group">
-                    <SquareArrowOutUpRight className="absolute top-3 right-3 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                    <Image
-                      src="/images/smartnotes.png"
-                      alt="Smart Notes"
-                      width={500}
-                      height={500}
-                      className="w-full h-48 bg-neutral-500"
-                    />
-                    <div className="flex items-center justify-between p-4 border-t-2">
-                      <p className="">SmartNotes</p>
-                      <p className="p-2 border rounded-md text-xs opacity-70">
-                        Website
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </HoverCardTrigger>
-              <HoverCardContent>
-                <p className="text-sm mb-4">
-                  SmartNotes features a modern design, user-friendly interface,
-                  and seamless performance across various platforms. This
-                  example demonstrates my ability to develop functional and
-                  practical web applications.
-                </p>
-                <p className="text-xs">
-                  Tech. Stack:{" "}
-                  <span className="opacity-70 ">
-                    HTML, CSS, JavaScript (Libraries: SwiperJS, ScrollReveal,
-                    Basiclightbox), Vite JS
-                  </span>
-                </p>
-              </HoverCardContent>
-            </HoverCard>
-          </li>
-          <li>
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <Link href="" target="_blank">
-                  <div className="rounded-md overflow-hidden border-2 relative group">
-                    <SquareArrowOutUpRight className="absolute top-3 right-3 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                    <Image
-                      src="/images/smartnotes.png"
-                      alt="Smart Notes"
-                      width={500}
-                      height={500}
-                      className="w-full h-48 bg-neutral-500"
-                    />
-                    <div className="flex items-center justify-between p-4 border-t-2">
-                      <p className="">SmartNotes</p>
-                      <p className="p-2 border rounded-md text-xs opacity-70">
-                        Website
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </HoverCardTrigger>
-              <HoverCardContent>
-                <p className="text-sm mb-4">
-                  SmartNotes features a modern design, user-friendly interface,
-                  and seamless performance across various platforms. This
-                  example demonstrates my ability to develop functional and
-                  practical web applications.
-                </p>
-                <p className="text-xs">
-                  Tech. Stack:{" "}
-                  <span className="opacity-70 ">
-                    HTML, CSS, JavaScript (Libraries: SwiperJS, ScrollReveal,
-                    Basiclightbox), Vite JS
-                  </span>
-                </p>
-              </HoverCardContent>
-            </HoverCard>
-          </li>
-          <li>
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <Link href="" target="_blank">
-                  <div className="rounded-md overflow-hidden border-2 relative group">
-                    <SquareArrowOutUpRight className="absolute top-3 right-3 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                    <Image
-                      src="/images/smartnotes.png"
-                      alt="Smart Notes"
-                      width={500}
-                      height={500}
-                      className="w-full h-48 bg-neutral-500"
-                    />
-                    <div className="flex items-center justify-between p-4 border-t-2">
-                      <p className="">SmartNotes</p>
-                      <p className="p-2 border rounded-md text-xs opacity-70">
-                        Website
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </HoverCardTrigger>
-              <HoverCardContent>
-                <p className="text-sm mb-4">
-                  SmartNotes features a modern design, user-friendly interface,
-                  and seamless performance across various platforms. This
-                  example demonstrates my ability to develop functional and
-                  practical web applications.
-                </p>
-                <p className="text-xs">
-                  Tech. Stack:{" "}
-                  <span className="opacity-70 ">
-                    HTML, CSS, JavaScript (Libraries: SwiperJS, ScrollReveal,
-                    Basiclightbox), Vite JS
-                  </span>
-                </p>
-              </HoverCardContent>
-            </HoverCard>
-          </li>
-        </ul>
+        <Title>Latest Projects</Title>
+        <ProjectList />
       </div>
     </div>
   );
