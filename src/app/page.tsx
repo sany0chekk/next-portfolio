@@ -32,10 +32,11 @@ export default function Home() {
         </h1>
         <div className=" grid gap-2 text-center max-w-[600px] mx-auto">
           <p>
-            I’m 23 years old and a Front-end Developer specializing in creating
-            modern and efficient web applications. I’m constantly improving my
-            skills and always open to new challenges to grow and deliver
-            high-quality products.
+            I’m a Front-end Developer who creates modern and efficient web
+            applications with a focus on usability and performance. I’m
+            constantly improving my skills, experimenting with new technologies,
+            and always open to challenges to deliver the best solutions for my
+            clients.
           </p>
           <p className="opacity-30 text-sm mb-6">
             Feel free to check out my projects and get in touch for
