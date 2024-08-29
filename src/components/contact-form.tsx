@@ -13,6 +13,9 @@ interface FormData {
   message: string;
 }
 
+const SERVICE_KEY = process.env.NEXT_PUBLIC_SERVICE_KEY;
+const TEMPLATE_KEY = process.env.NEXT_PUBLIC_TEMPLATE_KEY;
+
 const ContactPage = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState<FormData>({
@@ -40,7 +43,7 @@ const ContactPage = () => {
     };
 
     emailjs
-      .send("service_iq14e5j", "template_fnzu76f", templateParams)
+      .send(SERVICE_KEY, TEMPLATE_KEY, templateParams)
       .then((result) => {
         console.log("SUCCESS!", result.status, result.text);
         toast({

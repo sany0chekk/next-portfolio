@@ -15,7 +15,7 @@ const links = [
 const ContactPage = () => {
   return (
     <div>
-      <p className="mb-20 flex flex-col md:flex-row items-start md:gap-20">
+      <div className="mb-20 flex flex-col md:flex-row items-start md:gap-20">
         <Title>Have a Question?</Title>
         <p className="max-md:text-sm">
           If you have any questions, feedback, or if you’re interested in
@@ -23,7 +23,7 @@ const ContactPage = () => {
           contact form below. Alternatively, you can connect with me through the
           social media links provided.
         </p>
-      </p>
+      </div>
       <div className="mb-24 flex flex-col md:flex-row md:items-start md:gap-20">
         <Title>Connect</Title>
         <ul className="grid grid-cols-2 gap-3 group flex-grow">
