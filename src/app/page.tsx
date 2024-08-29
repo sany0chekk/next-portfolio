@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Title from "@/components/ui/title";
 
 export default function Home() {
   return (
@@ -53,7 +54,7 @@ export default function Home() {
         </div>
       </div>
       <div className="pt-32">
-        <h2 className="opacity-50 mb-4">Completed Projects</h2>
+        <Title>Completed Projects</Title>
         <ul className="grid md:grid-cols-2 gap-6">
           <li>
             <HoverCard>
