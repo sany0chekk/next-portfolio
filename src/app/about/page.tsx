@@ -11,6 +11,8 @@ import {
 import { SiRedux } from "react-icons/si";
 
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import SequentialAnimation from "@/components/animation-container";
+import { Metadata } from "next";
 
 const skills = [
   { skill: "HTML", icon: <FaHtml5 className="size-16" /> },
@@ -23,118 +25,126 @@ const skills = [
   { skill: "Next JS", icon: <RiNextjsFill className="size-16" /> },
 ];
 
+export const metadata: Metadata = {
+  title: "O. Veselyi | About",
+  description:
+    "Learn more about Oleksandr Veselyi, a passionate Front-end Developer from Ukraine. Explore his journey, skills, and the technologies he uses to create innovative and high-performing web applications.",
+};
+
 const AboutPage = () => {
   return (
     <div>
-      <div className="flex flex-col md:flex-row md:items-start md:gap-10 mb-20">
-        <Title>About me</Title>
-        <div className="grid gap-4 max-md:text-sm">
-          <p>
-            I’m Oleksandr, a 23-year-old Front-end Developer from Ukraine. I’m
-            passionate about creating dynamic and user-friendly web
-            applications. My specialization involves using modern technologies
-            and frameworks to build responsive and visually appealing
-            interfaces.
-          </p>
-          <p>
-            My journey in front-end development is driven by a constant desire
-            to learn and grow. I continuously explore new frameworks, tools, and
-            best practices to enhance my work and deliver high-quality products
-            that meet the needs of both clients and users.
-          </p>
-          <p>
-            Currently, I’m pursuing a Master’s degree in Human Resource
-            Management and Labor Economics. This unique blend of technical and
-            business education provides me with a broader perspective on team
-            dynamics and project management, allowing me to contribute
-            effectively as both a developer and a team member.
-          </p>
-          <p>
-            Whether it’s solving complex problems or collaborating on innovative
-            projects, I’m always ready to embrace new challenges and push the
-            boundaries of what’s possible in web development.
-          </p>
+      <SequentialAnimation>
+        <div className="flex flex-col md:flex-row md:items-start md:gap-10 mb-20">
+          <Title>About me</Title>
+          <div className="grid gap-4 max-md:text-sm">
+            <p>
+              I’m Oleksandr, a 23-year-old Front-end Developer from Ukraine. I’m
+              passionate about creating dynamic and user-friendly web
+              applications. My specialization involves using modern technologies
+              and frameworks to build responsive and visually appealing
+              interfaces.
+            </p>
+            <p>
+              My journey in front-end development is driven by a constant desire
+              to learn and grow. I continuously explore new frameworks, tools,
+              and best practices to enhance my work and deliver high-quality
+              products that meet the needs of both clients and users.
+            </p>
+            <p>
+              Currently, I’m pursuing a Master’s degree in Human Resource
+              Management and Labor Economics. This unique blend of technical and
+              business education provides me with a broader perspective on team
+              dynamics and project management, allowing me to contribute
+              effectively as both a developer and a team member.
+            </p>
+            <p>
+              Whether it’s solving complex problems or collaborating on
+              innovative projects, I’m always ready to embrace new challenges
+              and push the boundaries of what’s possible in web development.
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="mb-20">
-        <Title>My skills</Title>
-        <ul className="grid gap-6 md:gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 group">
-          {skills.map(({ skill, icon }) => {
-            return (
-              <li
-                key={skill}
-                className="transition-opacity group-hover:opacity-50 hover:!opacity-100"
-              >
-                <Card className="p-4 flex flex-col gap-4 items-center justify-center">
-                  <CardContent className="m-0 p-0">{icon}</CardContent>
-                  <CardFooter className="m-0 p-0">
-                    <p className="font-bold text-lg opacity-70">{skill}</p>
-                  </CardFooter>
-                </Card>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <div className="mb-20">
-        <Title>Work</Title>
-        <Table>
-          <TableBody>
-            <TableRow className="bg-muted/50">
-              <TableCell className="font-bold max-md:text-xs">
-                Front-end Developer
-              </TableCell>
-              <TableCell className="opacity-70 max-md:text-xs">
-                Freelance
-              </TableCell>
-              <TableCell className="text-right opacity-50 max-md:text-xs">
-                2024-
-              </TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-      </div>
-      <div>
-        <Title>Study</Title>
-        <Table>
-          <TableBody>
-            <TableRow>
-              <TableCell className="font-bold max-md:text-xs">
-                Yuriy Fedkovych Chernivtsi National University
-              </TableCell>
-              <TableCell className="opacity-70 max-md:text-xs">
-                {`Master's in Human Resource Management`} <br /> and Labor
-                Economics
-              </TableCell>
-              <TableCell className="text-right opacity-50 max-md:text-xs">
-                2024-2026
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-bold max-md:text-xs">
-                GoIt Academy
-              </TableCell>
-              <TableCell className="opacity-70 max-md:text-xs">
-                Fullstack Developer
-              </TableCell>
-              <TableCell className="text-right opacity-50 max-md:text-xs">
-                2023-2024
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-bold max-md:text-xs">
-                Yuriy Fedkovych Chernivtsi National University
-              </TableCell>
-              <TableCell className="opacity-70 max-md:text-xs">
-                Bachelor of Marketing
-              </TableCell>
-              <TableCell className="text-right opacity-50 max-md:text-xs">
-                2019-2021
-              </TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-      </div>
+        <div className="mb-20">
+          <Title>My skills</Title>
+          <ul className="grid gap-6 md:gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 group">
+            {skills.map(({ skill, icon }) => {
+              return (
+                <li
+                  key={skill}
+                  className="transition-opacity group-hover:opacity-50 hover:!opacity-100"
+                >
+                  <Card className="p-4 flex flex-col gap-4 items-center justify-center">
+                    <CardContent className="m-0 p-0">{icon}</CardContent>
+                    <CardFooter className="m-0 p-0">
+                      <p className="font-bold text-lg opacity-70">{skill}</p>
+                    </CardFooter>
+                  </Card>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="mb-20">
+          <Title>Work</Title>
+          <Table>
+            <TableBody>
+              <TableRow className="bg-muted/50">
+                <TableCell className="font-bold max-md:text-xs">
+                  Front-end Developer
+                </TableCell>
+                <TableCell className="opacity-70 max-md:text-xs">
+                  Freelance
+                </TableCell>
+                <TableCell className="text-right opacity-50 max-md:text-xs">
+                  2024-
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </div>
+        <div>
+          <Title>Study</Title>
+          <Table>
+            <TableBody>
+              <TableRow>
+                <TableCell className="font-bold max-md:text-xs">
+                  Yuriy Fedkovych Chernivtsi National University
+                </TableCell>
+                <TableCell className="opacity-70 max-md:text-xs">
+                  {`Master's in Human Resource Management`} <br /> and Labor
+                  Economics
+                </TableCell>
+                <TableCell className="text-right opacity-50 max-md:text-xs">
+                  2024-2026
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-bold max-md:text-xs">
+                  GoIt Academy
+                </TableCell>
+                <TableCell className="opacity-70 max-md:text-xs">
+                  Fullstack Developer
+                </TableCell>
+                <TableCell className="text-right opacity-50 max-md:text-xs">
+                  2023-2024
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-bold max-md:text-xs">
+                  Yuriy Fedkovych Chernivtsi National University
+                </TableCell>
+                <TableCell className="opacity-70 max-md:text-xs">
+                  Bachelor of Marketing
+                </TableCell>
+                <TableCell className="text-right opacity-50 max-md:text-xs">
+                  2019-2021
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </div>
+      </SequentialAnimation>
     </div>
   );
 };

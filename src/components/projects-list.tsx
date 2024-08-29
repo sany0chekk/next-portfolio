@@ -1,8 +1,13 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+
 import { SquareArrowOutUpRight } from "lucide-react";
 
 import Image from "next/image";
@@ -12,12 +17,37 @@ import projects from "@/api/projects.json";
 
 const displayedProjects = projects.slice(-4);
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 const ProjectList = () => {
   return (
-    <ul className="grid md:grid-cols-2 gap-6">
+    <motion.ul
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      className="grid md:grid-cols-2 gap-6"
+    >
       {displayedProjects.map(({ name, image, link, type, content, stack }) => {
         return (
-          <li key={name}>
+          <motion.li key={name} variants={item}>
             <HoverCard>
               <HoverCardTrigger asChild>
                 <Link href={link} target="_blank">
@@ -46,10 +76,10 @@ const ProjectList = () => {
                 </p>
               </HoverCardContent>
             </HoverCard>
-          </li>
+          </motion.li>
         );
       })}
-    </ul>
+    </motion.ul>
   );
 };
 
