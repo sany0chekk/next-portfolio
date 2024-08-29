@@ -47,6 +47,7 @@ const ContactPage = () => {
               >
                 <Link
                   href={link}
+                  target="_blank"
                   className="flex items-center gap-2 bg-gray-200 dark:bg-neutral-800 p-2 rounded-md"
                 >
                   {icon}
