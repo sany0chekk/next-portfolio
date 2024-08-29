@@ -6,10 +6,22 @@ import { FaGithub, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 const links = [
-  { text: "Gmail", link: "", icon: <SiGmail /> },
-  { text: "GitHub", link: "", icon: <FaGithub /> },
-  { text: "LinkedIn", link: "", icon: <FaLinkedin /> },
-  { text: "Telegram", link: "", icon: <FaTelegramPlane /> },
+  {
+    text: "Gmail",
+    link: "mailto:veselyy.oleksandr@gmail.com",
+    icon: <SiGmail />,
+  },
+  { text: "GitHub", link: "https://github.com/sany0chekk", icon: <FaGithub /> },
+  {
+    text: "LinkedIn",
+    link: "https://www.linkedin.com/in/o-veselyi/",
+    icon: <FaLinkedin />,
+  },
+  {
+    text: "Telegram",
+    link: "https://t.me/hackingbegin",
+    icon: <FaTelegramPlane />,
+  },
 ];
 
 const ContactPage = () => {
