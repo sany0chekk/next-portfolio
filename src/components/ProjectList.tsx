@@ -28,7 +28,7 @@ const ProjectList = () => {
                       alt={name}
                       width={500}
                       height={500}
-                      className="w-full h-48 bg-neutral-500 opacity-70"
+                      className="w-full h-48 bg-neutral-500 dark:opacity-70"
                     />
                     <div className="flex items-center justify-between p-4 border-t-2">
                       <p className="">{name}</p>
