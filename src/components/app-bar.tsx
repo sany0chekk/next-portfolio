@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { ThemeChanger } from "./theme-changer";
 import MobileMenu from "./mobile-menu";
+import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/", text: "Home" },
@@ -9,19 +12,21 @@ const links = [
 ];
 
 const AppBar = ({}) => {
+  const pathname = usePathname();
+
   return (
     <header>
       <nav className="flex justify-between items-center gap-4">
-        <p className="flex items-center gap-2 font-medium text-neutral-600">
-          Logo
-        </p>
+        <p className="flex items-center gap-2 font-bold">O. Veselyi</p>
         <ul className="hidden md:flex items-center gap-6">
           {links.map(({ href, text }) => {
             return (
               <li key={text}>
                 <Link
                   href={href}
-                  className="transition-opacity text-sm opacity-50 hover:opacity-95"
+                  className={`${
+                    pathname === href ? "opacity-95" : ""
+                  } transition-opacity text-sm opacity-50 hover:opacity-95`}
                 >
                   {text}
                 </Link>

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "SmartNotes",
+    "image": "/images/smartnotes.png",
+    "link": "https://sany0chekk.github.io/smartnotes/",
+    "type": "Website",
+    "content": "SmartNotes features a modern design, user-friendly interface, and seamless performance across various platforms. This example demonstrates my ability to develop functional and practical web applications.",
+    "stack": "HTML, CSS, JavaScript (Libraries: SwiperJS, ScrollReveal, Basiclightbox), Vite JS"
+  },
+  {
+    "name": "Travlog",
+    "image": "/images/travlog.png",
+    "link": "https://sany0chekk.github.io/travlog/",
+    "type": "Website",
+    "content": "This visually appealing and user-friendly site offers an intriguing introduction to the concept of discovering and selecting cities to explore. Travlog is a prime example of my ability to create captivating and professional frontend experiences for a wide range of industries.",
+    "stack": "HTML, CSS, JavaScript (Libraries: SwiperJS, GSAP, Fontawesome, Basiclightbox), Vite JS"
+  },
+  {
+    "name": "Developer's Personal Website",
+    "image": "/images/portfolio-website.png",
+    "link": "https://vikto0004.github.io/browser-battalion-2.0/",
+    "type": "Website",
+    "content": "This repository houses the outcome of our collaborative work on the team project at GoIT Academy. Together, we've crafted a professional personal website for Lloyd Jefferson, a fictional talented full-stack developer. My contributions: Section 'My Projects', Dark Theme functionality.",
+    "stack": "HTML, CSS, JavaScript (Libraries: GSAP, Axios, SwiperJS, Accordion-js, izitoast), Vite JS"
+  },
+  {
+    "name": "Tasty Kitchen",
+    "image": "/images/tasty-kitchen.png",
+    "link": "https://tasty-kitchen-coral.vercel.app/",
+    "type": "Website",
+    "content": "TastyKitchen offers recipes for every taste. From meat dishes to vegan options, breakfasts to desserts — find your perfect recipe with ease!",
+    "stack": "HTML, CSS, JavaScript, Tailwind CSS, Next JS"
+  },
+  {
+    "name": "E-Contacts",
+    "image": "/images/e-contacts.png",
+    "link": "https://goit-react-hw-08-ochre-chi.vercel.app/",
+    "type": "Web App",
+    "content": "E-Contacts is an intuitive app for managing your contacts effortlessly. Add, edit, and quickly find the contacts you need with advanced search, keeping everything organized at your fingertips.",
+    "stack": "HTML, CSS, JavaScript, Tailwind CSS, Vite JS"
+  }
+]
